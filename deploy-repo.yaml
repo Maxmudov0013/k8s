@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: repo1
+  name: repo1
+  namespace: a-maxmudov
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: repo1
+  template:
+    metadata:
+      labels:
+        app: repo1
+    spec:
+      containers:
+      - image: maxmudovk8s/uacademy:repo-1
+        name: repo1

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: repo1
+  namespace: a-maxmudov
+spec:
+  selector:
+    app: repo1
+  ports:
+  - port: 8060
+    targetPort: 80

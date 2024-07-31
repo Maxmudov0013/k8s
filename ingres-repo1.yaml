@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: repo1
+spec:
+  rules:
+  - host: repo1.ahmad.uz
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: repo1
+            port: 
+              number: 80
